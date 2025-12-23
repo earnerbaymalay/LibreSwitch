@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -16,11 +17,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Warning
+import androidx.compose.material.icons.filled.Security
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -67,11 +70,25 @@ fun LibreSwitchApp() {
     val privacyScore = ((1.0 - (foundTrackers.toFloat() / totalTrackers.toFloat())) * 100).toInt()
 
     Column(modifier = Modifier.fillMaxSize().background(HackerBlack).padding(16.dp)) {
-        Text("LIBRESWITCH", fontWeight = FontWeight.Black, fontSize = 28.sp, color = TerminalGreen)
-        Text("v1.0.0 // PROTOCOL: DEGOOGLE", fontSize = 12.sp, color = Color.Gray)
+        
+        // --- UPDATED HEADER WITH ICON ---
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Icon(
+                imageVector = Icons.Default.Security, 
+                contentDescription = null, 
+                tint = TerminalGreen, 
+                modifier = Modifier.size(32.dp)
+            )
+            Spacer(modifier = Modifier.width(12.dp))
+            Column {
+                Text("LIBRESWITCH", fontWeight = FontWeight.Black, fontSize = 24.sp, color = TerminalGreen)
+                Text("v1.0.0 // PROTOCOL: DEGOOGLE", fontSize = 10.sp, color = Color.Gray)
+            }
+        }
         
         Spacer(modifier = Modifier.height(24.dp))
 
+        // --- DASHBOARD CARD ---
         Card(
             colors = CardDefaults.cardColors(containerColor = SurfaceGrey),
             modifier = Modifier.fillMaxWidth().height(120.dp),
