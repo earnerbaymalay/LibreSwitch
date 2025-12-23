@@ -20,7 +20,6 @@ android {
     }
     
     composeOptions {
-        // STABILITY FIX: 1.5.1 is compatible with Kotlin 1.9.0
         kotlinCompilerExtensionVersion = "1.5.1"
     }
     
