@@ -36,6 +36,11 @@ Integrated support for **Shizuku** allows you to debloat your phone without Root
 3.  **Get APK:** Scroll down to "Artifacts" and download **LibreSwitch-Debug**.
 4.  **Install:** Open the file and allow installation from unknown sources.
 
+OR
+
+Follow the link below to go directly to the artifact.
+
+https://github.com/earnerbaymalay/LibreSwitch/actions/runs/20456856834/artifacts/4951571217
 ---
 
 ## 🛠️ Tech Stack
