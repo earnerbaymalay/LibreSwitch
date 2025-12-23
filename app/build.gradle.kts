@@ -20,12 +20,11 @@ android {
     }
     
     composeOptions {
-        // FIXED: 1.5.4 is compatible with Kotlin 1.9.20
-        kotlinCompilerExtensionVersion = "1.5.4"
+        // STABILITY FIX: 1.5.1 is compatible with Kotlin 1.9.0
+        kotlinCompilerExtensionVersion = "1.5.1"
     }
     
     compileOptions {
-        // FIXED: Modern Android requires Java 17
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
