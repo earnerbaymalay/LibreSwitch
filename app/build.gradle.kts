@@ -20,6 +20,7 @@ android {
     }
     
     composeOptions {
+        // 1.5.1 matches Kotlin 1.9.0 perfectly
         kotlinCompilerExtensionVersion = "1.5.1"
     }
     
